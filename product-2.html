@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بابا نويل المهرج - لعبة راقصة ومغنية تجلب الفرح والضحك لأطفالك | Miami Store">
+    <title>🎅 بابا نويل المهرج الراقص - لعبة رأس السنة المرحة | Miami Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/product-dancing-santa.css">
+</head>
+<body class="christmas-theme dancing-santa-page">
+
+<!-- Animated Christmas Background -->
+<div class="christmas-background">
+    <div class="snowflakes-container" id="snowflakesContainer"></div>
+    <div class="christmas-lights">
+        <div class="light light-red"></div>
+        <div class="light light-green"></div>
+        <div class="light light-gold"></div>
+        <div class="light light-blue"></div>
+        <div class="light light-red"></div>
+        <div class="light light-green"></div>
+    </div>
+    <div class="gradient-orbs">
+        <div class="orb orb-red"></div>
+        <div class="orb orb-green"></div>
+        <div class="orb orb-gold"></div>
+    </div>
+    <!-- Musical Notes Animation -->
+    <div class="floating-music-notes">
+        <span class="music-note" style="left: 10%; animation-delay: 0s;">🎵</span>
+        <span class="music-note" style="left: 25%; animation-delay: 1s;">🎶</span>
+        <span class="music-note" style="left: 40%; animation-delay: 2s;">🎵</span>
+        <span class="music-note" style="left: 60%; animation-delay: 3s;">🎶</span>
+        <span class="music-note" style="left: 75%; animation-delay: 4s;">🎵</span>
+        <span class="music-note" style="left: 90%; animation-delay: 5s;">🎶</span>
+    </div>
+</div>
+
+<!-- Back Button -->
+<a href="index.html" class="back-button-christmas">
+    <span class="back-icon">←</span>
+    <span>العودة للمتجر</span>
+</a>
+
+<!-- Main Product Page -->
+<div class="product-page-wrapper">
+
+    <!-- Hero Section with Product Title -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="santa-badge dancing">
+                <span class="badge-icon">🎅🤡</span>
+                <span>الأكثر مرحاً لرأس السنة</span>
+            </div>
+
+            <h1 class="product-hero-title">
+                <span class="title-main">بابا نويل المهرج الراقص</span>
+                <span class="title-magic">🎶 يغني، يرقص، يضحك! 💃</span>
+            </h1>
+
+            <p class="product-hero-subtitle">
+                بابا نويل المهرج 🎅🤡 هيخلي العيد مليان ضحك وهدايا! 🎁✨
+                لعبة مرحة تتحرك وتغني أغاني العيد، متعة الأطفال وضحكتهم أجمل هدية!
+            </p>
+
+            <div class="hero-badges">
+                <div class="hero-badge music">
+                    <span class="badge-icon">🎶</span>
+                    <span>يغني أغاني العيد</span>
+                </div>
+                <div class="hero-badge dance">
+                    <span class="badge-icon">💃</span>
+                    <span>يرقص بحركات مضحكة</span>
+                </div>
+                <div class="hero-badge safe">
+                    <span class="badge-icon">✅</span>
+                    <span>آمن 100%</span>
+                </div>
+            </div>
+
+            <!-- Hero Pricing -->
+            <div class="hero-pricing">
+                <div class="hero-price-row">
+                    <span class="hero-current-price">699 جنيه</span>
+                    <span class="hero-old-price">1399 جنيه</span>
+                    <span class="hero-discount-badge">خصم 50%</span>
+                </div>
+                <div class="hero-savings">
+                    💰 وفر <strong>700 جنيه</strong> واستمتع بالمرح!
+                </div>
+            </div>
+
+            <a href="#orderForm" class="hero-cta-button" onclick="scrollToForm(event)">
+                <span>اطلب الآن واستمتع بالضحك 😂🎄</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Modern Product Gallery -->
+    <section class="modern-gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">
+                    <span class="icon">📸</span>
+                    شاهد بابا نويل وهو يرقص ويغني
+                </h2>
+            </div>
+
+            <div class="gallery-container">
+                <!-- Main Display Image -->
+                <div class="main-gallery-view">
+                    <img
+                            id="mainGalleryImage"
+                            src="assets/product-2/image-1.jpg"
+                            alt="بابا نويل المهرج الراقص"
+                            class="main-gallery-img"
+                    >
+                    <div class="gallery-navigation">
+                        <button class="gallery-nav-btn prev" onclick="navigateGallery(-1)" aria-label="الصورة السابقة">
+                            <span>❮</span>
+                        </button>
+                        <button class="gallery-nav-btn next" onclick="navigateGallery(1)" aria-label="الصورة التالية">
+                            <span>❯</span>
+                        </button>
+                    </div>
+                    <div class="gallery-counter">
+                        <span id="currentImageIndex">1</span> / <span id="totalImages">6</span>
+                    </div>
+                </div>
+
+                <!-- Thumbnail Strip -->
+                <div class="gallery-thumbnails-wrapper">
+                    <div class="gallery-thumbnails" id="galleryThumbnails">
+                        <!-- Thumbnails will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Auto-play Control -->
+                <div class="gallery-controls">
+                    <button class="gallery-control-btn" onclick="toggleAutoPlay()" id="autoPlayBtn">
+                        <span id="autoPlayIcon">⏸</span>
+                        <span id="autoPlayText">إيقاف التشغيل التلقائي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeGalleryModal()">✕</button>
+            <img id="modalImage" src="" alt="صورة مكبرة" class="modal-img">
+            <div class="modal-navigation">
+                <button class="modal-nav-btn prev" onclick="navigateModal(-1)">❮</button>
+                <button class="modal-nav-btn next" onclick="navigateModal(1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Order Form -->
+    <section class="order-form-section" id="orderForm">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2 class="form-title">
+                        <span class="icon">🎁</span>
+                        اطلب الآن واستلم خلال 2-4 أيام
+                    </h2>
+                    <p class="form-subtitle">املأ البيانات وسيتصل بك فريقنا خلال دقائق لتأكيد طلبك</p>
+                </div>
+
+                <form id="productOrderForm" class="christmas-form">
+                    <!-- Personal Info -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span class="icon">👤</span>
+                            البيانات الشخصية
+                        </h4>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                الاسم بالكامل <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">👤</span>
+                                <input
+                                        type="text"
+                                        class="form-input"
+                                        id="customerName"
+                                        placeholder="مثال: أحمد محمد علي"
+                                        required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                رقم الموبايل <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">📱</span>
+                                <input
+                                        type="tel"
+                                        class="form-input"
+                                        id="customerPhone"
+                                        placeholder="01012345678"
+                                        pattern="[0-9]{11}"
+                                        required
+                                >
+                            </div>
+                            <span class="form-hint">أدخل 11 رقم بالأرقام الإنجليزية</span>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Info -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span class="icon">🚚</span>
+                            عنوان التوصيل
+                        </h4>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                المحافظة <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">📍</span>
+                                <select class="form-input" id="governorate" required>
+                                    <option value="">اختر المحافظة</option>
+                                    <option value="القاهرة">القاهرة</option>
+                                    <option value="الجيزة">الجيزة</option>
+                                    <option value="الإسكندرية">الإسكندرية</option>
+                                    <option value="الدقهلية">الدقهلية</option>
+                                    <option value="الشرقية">الشرقية</option>
+                                    <option value="القليوبية">القليوبية</option>
+                                    <option value="البحيرة">البحيرة</option>
+                                    <option value="الغربية">الغربية</option>
+                                    <option value="المنوفية">المنوفية</option>
+                                    <option value="كفر الشيخ">كفر الشيخ</option>
+                                    <option value="دمياط">دمياط</option>
+                                    <option value="بورسعيد">بورسعيد</option>
+                                    <option value="الإسماعيلية">الإسماعيلية</option>
+                                    <option value="السويس">السويس</option>
+                                    <option value="الفيوم">الفيوم</option>
+                                    <option value="بني سويف">بني سويف</option>
+                                    <option value="المنيا">المنيا</option>
+                                    <option value="أسيوط">أسيوط</option>
+                                    <option value="سوهاج">سوهاج</option>
+                                    <option value="قنا">قنا</option>
+                                    <option value="الأقصر">الأقصر</option>
+                                    <option value="أسوان">أسوان</option>
+                                    <option value="البحر الأحمر">البحر الأحمر</option>
+                                    <option value="الوادي الجديد">الوادي الجديد</option>
+                                    <option value="مطروح">مطروح</option>
+                                    <option value="شمال سيناء">شمال سيناء</option>
+                                    <option value="جنوب سيناء">جنوب سيناء</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                العنوان بالتفصيل <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🏠</span>
+                                <textarea
+                                        class="form-input form-textarea"
+                                        id="detailedAddress"
+                                        placeholder="مثال: شارع النصر، عمارة 15، الدور 3، شقة 7"
+                                        rows="3"
+                                        required
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                الكمية <span class="required">*</span>
+                            </label>
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn minus" onclick="updateQuantity(-1)">−</button>
+                                <input type="number" class="qty-input" id="quantity" value="1" min="1" max="10" readonly>
+                                <button type="button" class="qty-btn plus" onclick="updateQuantity(1)">+</button>
+                            </div>
+                            <div class="quantity-note">
+                                <span class="gift-icon">🎁</span>
+                                اطلب 3 قطع واحصل على خصم إضافي 10%
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                ملاحظات إضافية (اختياري)
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">📝</span>
+                                <textarea
+                                        class="form-input form-textarea"
+                                        id="notes"
+                                        placeholder="أي ملاحظات أو طلبات خاصة..."
+                                        rows="2"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="order-summary-box">
+                        <h4 class="summary-title">
+                            <span class="icon">💳</span>
+                            ملخص الطلب
+                        </h4>
+                        <div class="summary-content">
+                            <div class="summary-row">
+                                <span>سعر القطعة الواحدة</span>
+                                <span>699 جنيه</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>الكمية</span>
+                                <span id="summaryQty">1</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>المجموع الفرعي</span>
+                                <span id="subtotal">699 جنيه</span>
+                            </div>
+                            <div class="summary-row discount-row" id="discountRow" style="display: none;">
+                                <span>خصم الكمية (10%)</span>
+                                <span class="discount-value" id="discountAmount">- 0 جنيه</span>
+                            </div>
+                            <div class="summary-row shipping-row">
+                                <span>الشحن</span>
+                                <span class="free-badge">مجاناً 🎁</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total-row">
+                                <span>الإجمالي النهائي</span>
+                                <span class="total-price" id="totalPrice">699 جنيه</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submitOrderBtn">
+                        <span class="btn-icon">🎁</span>
+                        <span class="btn-text">أكد طلبك الآن - الدفع عند الاستلام</span>
+                    </button>
+
+                    <div class="form-security-note">
+                        <span class="icon">🔒</span>
+                        بياناتك آمنة 100% - الدفع عند استلام المنتج فقط
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div class="success-popup" id="successPopup">
+                    <div class="success-content">
+                        <div class="success-icon-big">✅</div>
+                        <h3 class="success-title">تم استلام طلبك بنجاح! 🎉</h3>
+                        <p class="success-message">
+                            شكراً لك! سيتواصل معك فريق خدمة العملاء خلال دقائق لتأكيد الطلب والعنوان.
+                        </p>
+                        <div class="success-details">
+                            <p><strong>رقم الطلب:</strong> <span id="orderNumber">#12345</span></p>
+                            <p><strong>الاسم:</strong> <span id="confirmName"></span></p>
+                            <p><strong>الكمية:</strong> <span id="confirmQty"></span> قطعة</p>
+                            <p><strong>الإجمالي:</strong> <span id="confirmTotal"></span></p>
+                        </div>
+                        <button class="success-btn" onclick="location.reload()">طلب جديد</button>
+                        <button class="back-shop-btn" onclick="location.href='index.html'">العودة للمتجر</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Stats -->
+    <section class="live-stats-section">
+        <div class="container-fluid">
+            <div class="live-stats-grid">
+                <div class="live-stat-card pulse-animation">
+                    <span class="live-indicator"></span>
+                    <span class="stat-number" id="liveViewers">52</span>
+                    <span class="stat-label">شخص يشاهد الآن</span>
+                </div>
+                <div class="live-stat-card">
+                    <span class="stat-icon">🔥</span>
+                    <span class="stat-number" id="todayOrders">138</span>
+                    <span class="stat-label">طلب اليوم</span>
+                </div>
+                <div class="live-stat-card">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-label">من 921 تقييم</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is This For Section -->
+    <section class="target-audience-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">❤️</span>
+                مين هيحب بابا نويل المهرج؟
+            </h2>
+
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">👶</div>
+                    <h3>للأطفال المرحين</h3>
+                    <p>الأطفال هيحبوا يشوفوه يرقص ويغني! لعبة تفاعلية تخليهم يضحكوا ويلعبوا لساعات، وتنمي حبهم للموسيقى</p>
+                    <div class="audience-age">السن المناسب: 2-8 سنوات</div>
+                </div>
+
+                <div class="audience-card featured">
+                    <div class="featured-badge">الأكثر مرحاً</div>
+                    <div class="audience-icon">👪</div>
+                    <h3>للعائلات السعيدة</h3>
+                    <p>هيخلي كل العيلة تجتمع وتضحك سوا! بابا نويل المهرج هيكون نجم الحفلة ويخلق ذكريات جميلة للأطفال والكبار</p>
+                    <div class="audience-age">متعة لكل الأعمار</div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🎉</div>
+                    <h3>للحفلات والمناسبات</h3>
+                    <p>مثالي لحفلات أعياد الميلاد وجمعات رأس السنة! هيكون محور الاهتمام ويخلي الأطفال مبسوطين طول الوقت</p>
+                    <div class="audience-age">نجم أي حفلة</div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🎓</div>
+                    <h3>للحضانات والمدارس</h3>
+                    <p>أداة تعليمية مرحة تجذب انتباه الأطفال وتخليهم يحبوا الموسيقى والحركة. مثالي للأنشطة الجماعية</p>
+                    <div class="audience-age">للأنشطة الترفيهية</div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🎁</div>
+                    <h3>هدية مفاجئة</h3>
+                    <p>هدية غير تقليدية هتفرح أي طفل! مناسبة للأعياد، أعياد الميلاد، أو حتى كمكافأة. الضحك مضمون!</p>
+                    <div class="audience-age">تغليف احترافي مجاناً</div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🏠</div>
+                    <h3>لديكور البيت المرح</h3>
+                    <p>مش بس لعبة - كمان ديكور يضيف روح الفرح والمرح لأي مكان. هيخلي البيت مليان طاقة إيجابية!</p>
+                    <div class="audience-age">ديكور تفاعلي</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Features -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">✨</span>
+                ليه بابا نويل المهرج مميز؟
+            </h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎶</div>
+                    <h3>يغني أغاني العيد</h3>
+                    <p>بيغني أجمل أغاني رأس السنة والكريسماس بصوت واضح ومرح يخلي الأطفال يغنوا معاه!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💃</div>
+                    <h3>يرقص بحركات مضحكة</h3>
+                    <p>حركاته المرحة والمضحكة هتخلي الأطفال يضحكوا من قلبهم ويحاولوا يرقصوا معاه!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚶‍♂️</div>
+                    <h3>خفيف وسهل الحركة</h3>
+                    <p>وزنه خفيف (480 جرام) والأطفال يقدروا يحركوه بسهولة ويلعبوا معاه في أي مكان</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>آمن 100% للأطفال</h3>
+                    <p>مصنوع من مواد آمنة وعالية الجودة، مناسب للأطفال الصغار ومتين يستحمل اللعب المتكرر</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔋</div>
+                    <h3>يعمل بالبطارية</h3>
+                    <p>مش محتاج شحن أو أسلاك - فقط حط البطاريات واستمتع بالمرح!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎉</div>
+                    <h3>هدية مثالية ومفاجئة</h3>
+                    <p>هدية أصلية ومبتكرة تفرح الأطفال وتخلي أي مناسبة لا تُنسى!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details-section">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Specifications -->
+                <div class="details-card">
+                    <h3 class="details-title">
+                        <span class="icon">📋</span>
+                        المواصفات
+                    </h3>
+                    <ul class="details-list">
+                        <li>
+                            <span class="detail-label">الخامة:</span>
+                            <span class="detail-value">بلاستيك عالي الجودة وآمن</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">الوزن:</span>
+                            <span class="detail-value">480 جرام (خفيف جداً)</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">التشغيل:</span>
+                            <span class="detail-value">بطاريات AA (غير مرفقة)</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">الصوت:</span>
+                            <span class="detail-value">سماعات مدمجة عالية الجودة</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">السن المناسب:</span>
+                            <span class="detail-value">من 2 سنوات فما فوق</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">الوظائف:</span>
+                            <span class="detail-value">غناء + رقص + حركة + إضاءة</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Package Contents -->
+                <div class="details-card">
+                    <h3 class="details-title">
+                        <span class="icon">📦</span>
+                        محتوى العبوة
+                    </h3>
+                    <ul class="package-list">
+                        <li>
+                            <span class="check-icon">✅</span>
+                            <span>بابا نويل المهرج الراقص</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✅</span>
+                            <span>أغاني العيد والكريسماس مدمجة</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✅</span>
+                            <span>إضاءة LED ملونة</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✅</span>
+                            <span>دليل التشغيل بالعربية</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✅</span>
+                            <span>تغليف فاخر جاهز للإهداء</span>
+                        </li>
+                        <li class="note-item">
+                            <span class="note-icon">⚠️</span>
+                            <span>البطاريات غير مرفقة (يحتاج 3 بطاريات AA)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">✅</div>
+                    <h4>منتج أصلي 100%</h4>
+                    <p>ضمان الجودة والأمان</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🚚</div>
+                    <h4>شحن مجاني</h4>
+                    <p>لجميع المحافظات</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">💳</div>
+                    <h4>الدفع عند الاستلام</h4>
+                    <p>آمن ومضمون</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🔄</div>
+                    <h4>إرجاع مجاني</h4>
+                    <p>خلال 7 أيام</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="js/product-dancing-santa.js"></script>
+</body>
+</html>

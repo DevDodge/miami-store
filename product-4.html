@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ساعة ذكية فاخرة - Miami Store">
+    <title>ساعة ذكية فاخرة | Miami Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="product-page">
+<!-- Animated Background -->
+<div class="animated-bg">
+    <div class="snowflakes" id="snowflakes"></div>
+    <div class="gradient-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+</div>
+
+<!-- Back Button -->
+<a href="index.html" class="back-button">
+    <span class="back-icon">←</span>
+    <span>العودة للمتجر</span>
+</a>
+
+<!-- Product Page Container -->
+<div class="product-page-container">
+    <div class="container">
+        <!-- Product Live Stats -->
+        <div class="product-live-stats">
+            <div class="live-stat-badge pulse">
+                <span class="live-indicator"></span>
+                <span id="productViewers">24</span> شخص يشاهدون هذا المنتج الآن
+            </div>
+            <div class="live-stat-badge">
+                🔥 <span id="productOrders">38</span> طلب في آخر 24 ساعة
+            </div>
+        </div>
+
+        <div class="product-layout">
+            <!-- Product Gallery Section -->
+            <div class="product-gallery">
+                <div class="sale-badge-large">
+                    <span class="sale-percentage">خصم 48%</span>
+                    <span class="sale-label">وفر 1,201 جنيه</span>
+                </div>
+
+                <div class="main-image-container">
+                    <img id="mainProductImage" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800" alt="ساعة ذكية فاخرة" class="main-product-image">
+                    <button class="image-zoom-btn" onclick="toggleImageZoom()">🔍</button>
+                </div>
+
+                <div class="thumbnail-gallery">
+                    <div class="thumbnail active" onclick="changeMainImage(this, 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800')">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200" alt="صورة 1">
+                    </div>
+                    <div class="thumbnail" onclick="changeMainImage(this, 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800')">
+                        <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=200" alt="صورة 2">
+                    </div>
+                    <div class="thumbnail" onclick="changeMainImage(this, 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800')">
+                        <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=200" alt="صورة 3">
+                    </div>
+                    <div class="thumbnail" onclick="changeMainImage(this, 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800')">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=200" alt="صورة 4">
+                    </div>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges-inline">
+                    <div class="trust-badge-small">✅ منتج أصلي</div>
+                    <div class="trust-badge-small">🚚 شحن مجاني</div>
+                    <div class="trust-badge-small">🔒 دفع آمن</div>
+                </div>
+            </div>
+
+            <!-- Product Info Section -->
+            <div class="product-info-section">
+                <div class="product-header">
+                    <h1 class="product-title">ساعة ذكية فاخرة بتقنية AMOLED</h1>
+                    <div class="product-rating">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <span class="rating-text">(4.8 من 2,451 تقييم)</span>
+                    </div>
+                </div>
+
+                <!-- Pricing Section -->
+                <div class="pricing-section">
+                    <div class="price-row">
+                        <div class="current-price">1,299 جنيه</div>
+                        <div class="old-price">2,500 جنيه</div>
+                    </div>
+                    <div class="savings-badge">
+                        💰 وفر <strong>1,201 جنيه</strong> على هذا الطلب
+                    </div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-section">
+                    <div class="countdown-header">
+                        <span class="countdown-icon">⏰</span>
+                        <span>العرض ينتهي خلال:</span>
+                    </div>
+                    <div class="countdown-timer" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">23</span>
+                            <span class="countdown-label">ساعة</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">45</span>
+                            <span class="countdown-label">دقيقة</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">30</span>
+                            <span class="countdown-label">ثانية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Features -->
+                <div class="product-features">
+                    <h3 class="features-title">✨ المميزات الرئيسية</h3>
+                    <ul class="features-list">
+                        <li class="feature-item">
+                            <span class="feature-icon">📱</span>
+                            <span>شاشة AMOLED عالية الدقة مقاس 1.4 بوصة</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">💧</span>
+                            <span>مقاومة للماء بمعيار IP68 (سباحة آمنة)</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">🔋</span>
+                            <span>بطارية تدوم حتى 7 أيام من الاستخدام المكثف</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">❤️</span>
+                            <span>مراقبة معدل ضربات القلب على مدار 24 ساعة</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">💤</span>
+                            <span>تتبع جودة النوم بشكل ذكي واحترافي</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">📞</span>
+                            <span>إشعارات المكالمات والرسائل الفورية</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">🏃</span>
+                            <span>أكثر من 100 وضع رياضي مختلف</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">🌐</span>
+                            <span>متوافقة مع أندرويد و iOS</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technical Specifications -->
+                <div class="specifications-section">
+                    <h3 class="spec-title">📋 المواصفات التقنية</h3>
+                    <div class="spec-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">نوع الشاشة</span>
+                            <span class="spec-value">AMOLED</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">حجم الشاشة</span>
+                            <span class="spec-value">1.4 بوصة</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">الدقة</span>
+                            <span class="spec-value">454×454 بكسل</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">البطارية</span>
+                            <span class="spec-value">420 mAh</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">مقاومة الماء</span>
+                            <span class="spec-value">IP68</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">البلوتوث</span>
+                            <span class="spec-value">5.0</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">الوزن</span>
+                            <span class="spec-value">45 جرام</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">الألوان</span>
+                            <span class="spec-value">أسود، فضي، ذهبي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Form -->
+                <div class="order-form-section" id="orderFormSection">
+                    <div class="form-header">
+                        <h3 class="form-title">📝 أكمل طلبك الآن</h3>
+                        <p class="form-subtitle">املأ البيانات التالية وسيتم التواصل معك فوراً</p>
+                    </div>
+
+                    <form id="orderForm" class="order-form">
+                        <!-- Personal Info -->
+                        <div class="form-section">
+                            <h4 class="form-section-title">👤 البيانات الشخصية</h4>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">الاسم بالكامل</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">👤</span>
+                                    <input
+                                            type="text"
+                                            class="form-input"
+                                            id="clientName"
+                                            placeholder="مثال: أحمد محمد علي"
+                                            required
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">رقم المحمول (بالأرقام الإنجليزية)</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">📱</span>
+                                    <input
+                                            type="tel"
+                                            class="form-input"
+                                            id="clientPhone"
+                                            placeholder="مثال: 01012345678"
+                                            pattern="[0-9]{11}"
+                                            required
+                                    >
+                                </div>
+                                <span class="form-hint">أدخل 11 رقم بالأرقام الإنجليزية</span>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Info -->
+                        <div class="form-section">
+                            <h4 class="form-section-title">🚚 بيانات الشحن</h4>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">المحافظة</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">📍</span>
+                                    <select class="form-input" id="clientGovernment" required>
+                                        <option value="">اختر المحافظة</option>
+                                        <option value="القاهرة">القاهرة</option>
+                                        <option value="الجيزة">الجيزة</option>
+                                        <option value="الإسكندرية">الإسكندرية</option>
+                                        <option value="الدقهلية">الدقهلية</option>
+                                        <option value="الشرقية">الشرقية</option>
+                                        <option value="القليوبية">القليوبية</option>
+                                        <option value="البحيرة">البحيرة</option>
+                                        <option value="الغربية">الغربية</option>
+                                        <option value="المنوفية">المنوفية</option>
+                                        <option value="كفر الشيخ">كفر الشيخ</option>
+                                        <option value="دمياط">دمياط</option>
+                                        <option value="بورسعيد">بورسعيد</option>
+                                        <option value="الإسماعيلية">الإسماعيلية</option>
+                                        <option value="السويس">السويس</option>
+                                        <option value="الفيوم">الفيوم</option>
+                                        <option value="بني سويف">بني سويف</option>
+                                        <option value="المنيا">المنيا</option>
+                                        <option value="أسيوط">أسيوط</option>
+                                        <option value="سوهاج">سوهاج</option>
+                                        <option value="قنا">قنا</option>
+                                        <option value="الأقصر">الأقصر</option>
+                                        <option value="أسوان">أسوان</option>
+                                        <option value="البحر الأحمر">البحر الأحمر</option>
+                                        <option value="الوادي الجديد">الوادي الجديد</option>
+                                        <option value="مطروح">مطروح</option>
+                                        <option value="شمال سيناء">شمال سيناء</option>
+                                        <option value="جنوب سيناء">جنوب سيناء</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">العنوان بالتفصيل</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">🏠</span>
+                                    <textarea
+                                            class="form-input form-textarea"
+                                            id="clientAddress"
+                                            placeholder="مثال: شارع النصر، عمارة 15، الدور الثالث، شقة 7"
+                                            rows="3"
+                                            required
+                                    ></textarea>
+                                </div>
+                                <span class="form-hint">اكتب عنوان مفصل لضمان وصول الطلب بسرعة</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">الكمية</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="quantity-selector">
+                                    <button type="button" class="qty-btn" onclick="decreaseQuantity()">−</button>
+                                    <input type="number" class="qty-input" id="quantity" value="1" min="1" max="10" readonly>
+                                    <button type="button" class="qty-btn" onclick="increaseQuantity()">+</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-text">ملاحظات إضافية (اختياري)</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">📝</span>
+                                    <textarea
+                                            class="form-input form-textarea"
+                                            id="notes"
+                                            placeholder="أي ملاحظات أو طلبات خاصة..."
+                                            rows="2"
+                                    ></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="order-summary">
+                            <h4 class="summary-title">💳 ملخص الطلب</h4>
+                            <div class="summary-row">
+                                <span>سعر المنتج</span>
+                                <span>1,299 جنيه</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>الكمية</span>
+                                <span id="summaryQuantity">1</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>رسوم الشحن</span>
+                                <span class="free-shipping">مجاناً 🎁</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row summary-total">
+                                <span>الإجمالي</span>
+                                <span id="totalPrice">1,299 جنيه</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-order-btn" id="submitBtn">
+                            <span class="btn-icon">🎁</span>
+                            <span class="btn-text">تأكيد الطلب الآن</span>
+                        </button>
+
+                        <div class="payment-note">
+                            🔒 الدفع عند الاستلام - لا تدفع أي مبلغ الآن
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <div class="success-icon">✅</div>
+                        <h3 class="success-title">تم إرسال طلبك بنجاح!</h3>
+                        <p class="success-text">سيتواصل معك فريقنا خلال دقائق لتأكيد الطلب</p>
+                        <button class="success-btn" onclick="location.href='index.html'">العودة للمتجر</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+    // Product specific data
+    const productData = {
+        id: 1,
+        name: 'ساعة ذكية فاخرة',
+        price: 1299,
+        oldPrice: 2500
+    };
+
+    // Initialize product page
+    initProductPage(productData);
+</script>
+</body>
+</html>

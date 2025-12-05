@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بابا نويل الموسيقي - ديكور راقي وموسيقى ساحرة لاحتفالات رأس السنة | Miami Store">
+    <title>🎷 بابا نويل الموسيقي - الديكور المثالي لاحتفالاتك | Miami Store</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700;900&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/product-musical-santa.css">
+</head>
+<body class="elegant-theme">
+
+<!-- Elegant Background -->
+<div class="elegant-background">
+    <div class="ambient-particles" id="particlesContainer"></div>
+    <div class="golden-sparkles" id="sparklesContainer"></div>
+    <div class="elegant-gradient-overlay"></div>
+</div>
+
+<!-- Refined Back Button -->
+<a href="index.html" class="back-button-elegant">
+    <span class="back-icon">←</span>
+    <span>المتجر الرئيسي</span>
+</a>
+
+<!-- Main Product Page -->
+<div class="product-page-elegant">
+
+    <!-- ========================================
+         1. HERO SECTION (Product Title)
+         ======================================== -->
+    <section class="hero-cinematic">
+        <div class="hero-content-elegant">
+            <div class="premium-badge">
+                <span class="badge-icon">🎷</span>
+                <span>Premium Holiday Collection</span>
+            </div>
+
+            <h1 class="product-title-elegant">
+                <span class="title-main-elegant">بابا نويل الموسيقي</span>
+                <span class="title-accent-elegant">اجعل احتفالك لا يُنسى بموسيقى الساكسفون الساحرة</span>
+            </h1>
+
+            <p class="hero-description-elegant">
+                بابا نويل الموسيقي - أكثر من مجرد ديكور، إنها تجربة احتفالية كاملة.
+                استمتع بموسيقى ساحرة ورقصات مسلية تملأ منزلك بأجواء الأعياد الدافئة
+            </p>
+
+            <div class="hero-features-elegant">
+                <div class="feature-pill">
+                    <span class="feature-icon">🎵</span>
+                    <span>موسيقى أصلية</span>
+                </div>
+                <div class="feature-pill">
+                    <span class="feature-icon">💃</span>
+                    <span>حركات راقصة</span>
+                </div>
+                <div class="feature-pill">
+                    <span class="feature-icon">✨</span>
+                    <span>ديكور فاخر</span>
+                </div>
+            </div>
+
+            <!-- Sophisticated Pricing -->
+            <div class="hero-pricing-elegant">
+                <div class="price-container-elegant">
+                    <span class="current-price-elegant">699</span>
+                    <span class="currency-elegant">جنيه</span>
+                </div>
+                <div class="price-details">
+                    <span class="original-price-elegant">1,399 جنيه</span>
+                    <span class="savings-badge">وفر 700 جنيه</span>
+                </div>
+            </div>
+
+            <a href="#elegantOrderForm" class="cta-button-elegant" onclick="scrollToForm(event)">
+                <span>اطلب الآن</span>
+                <span class="cta-icon">→</span>
+            </a>
+
+            <div class="trust-indicators">
+                <span class="trust-item">🔒 دفع آمن</span>
+                <span class="trust-item">🚚 شحن مجاني</span>
+                <span class="trust-item">↩️ إرجاع مجاني</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         2. GALLERY SECTION
+         ======================================== -->
+    <section class="gallery-section-elegant">
+        <div class="container">
+            <div class="section-header-elegant">
+                <h2 class="section-title-elegant">
+                    <span class="title-line"></span>
+                    <span>استكشف التفاصيل</span>
+                    <span class="title-line"></span>
+                </h2>
+                <p class="section-subtitle-elegant">
+                    تصميم راقي مصنوع بعناية فائقة
+                </p>
+            </div>
+
+            <div class="gallery-elegant-container">
+                <!-- Main Display -->
+                <div class="main-display-elegant">
+                    <div class="image-frame-elegant">
+                        <img
+                                id="mainElegantImage"
+                                src="assets/product-3/image-1.jpg"
+                                alt="بابا نويل الموسيقي"
+                                class="main-elegant-img"
+                        >
+                        <div class="image-overlay-elegant"></div>
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <button class="nav-btn-elegant prev-elegant" onclick="navigateElegantGallery(-1)" aria-label="السابق">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="nav-btn-elegant next-elegant" onclick="navigateElegantGallery(1)" aria-label="التالي">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <!-- Counter -->
+                    <div class="elegant-counter">
+                        <span id="elegantCurrentIndex">1</span>
+                        <span class="counter-separator">/</span>
+                        <span id="elegantTotalImages">5</span>
+                    </div>
+                </div>
+
+                <!-- Thumbnail Grid -->
+                <div class="thumbnails-elegant-grid" id="elegantThumbnails">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Modal -->
+    <div class="image-elegant-modal" id="elegantImageModal">
+        <button class="modal-elegant-close" onclick="closeElegantImageModal()">✕</button>
+        <div class="modal-elegant-content">
+            <img id="elegantModalImage" src="" alt="صورة مكبرة" class="modal-elegant-img">
+            <div class="modal-elegant-navigation">
+                <button class="modal-elegant-nav prev" onclick="navigateElegantModal(-1)">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="modal-elegant-nav next" onclick="navigateElegantModal(1)">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         3. COUNTDOWN SECTION
+         ======================================== -->
+    <section class="countdown-elegant-section">
+        <div class="container">
+            <div class="countdown-elegant-container">
+                <h3 class="countdown-title-elegant">⏰ العرض الحصري ينتهي خلال</h3>
+
+                <div class="countdown-elegant-grid" id="elegantCountdown">
+                    <div class="time-box-elegant">
+                        <div class="time-number-elegant" id="elegantHours">23</div>
+                        <div class="time-label-elegant">ساعة</div>
+                    </div>
+                    <div class="time-separator-elegant">:</div>
+                    <div class="time-box-elegant">
+                        <div class="time-number-elegant" id="elegantMinutes">59</div>
+                        <div class="time-label-elegant">دقيقة</div>
+                    </div>
+                    <div class="time-separator-elegant">:</div>
+                    <div class="time-box-elegant">
+                        <div class="time-number-elegant" id="elegantSeconds">59</div>
+                        <div class="time-label-elegant">ثانية</div>
+                    </div>
+                </div>
+
+                <p class="countdown-note-elegant">
+                    ⚡ عدد محدود متاح - احجز الآن
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         4. ORDER FORM SECTION
+         ======================================== -->
+    <section class="order-section-elegant" id="elegantOrderForm">
+        <div class="container">
+            <div class="form-elegant-wrapper">
+                <div class="form-elegant-header">
+                    <h2 class="form-elegant-title">
+                        <span class="icon">🎁</span>
+                        اطلب الآن واستلم خلال 2-4 أيام
+                    </h2>
+                    <p class="form-elegant-subtitle">
+                        املأ البيانات وسنتواصل معك خلال دقائق لتأكيد الطلب
+                    </p>
+                </div>
+
+                <form id="elegantOrderForm" class="elegant-form">
+                    <!-- Personal Information -->
+                    <div class="form-elegant-section">
+                        <h4 class="form-section-title-elegant">
+                            <span class="section-icon">👤</span>
+                            البيانات الشخصية
+                        </h4>
+
+                        <div class="form-elegant-group">
+                            <label class="form-elegant-label">
+                                الاسم الكامل <span class="required-elegant">*</span>
+                            </label>
+                            <input
+                                    type="text"
+                                    class="form-elegant-input"
+                                    id="elegantCustomerName"
+                                    placeholder="مثال: أحمد محمد علي"
+                                    required
+                            >
+                        </div>
+
+                        <div class="form-elegant-group">
+                            <label class="form-elegant-label">
+                                رقم الموبايل <span class="required-elegant">*</span>
+                            </label>
+                            <input
+                                    type="tel"
+                                    class="form-elegant-input"
+                                    id="elegantCustomerPhone"
+                                    placeholder="01012345678"
+                                    pattern="[0-9]{11}"
+                                    required
+                            >
+                            <span class="form-elegant-hint">يجب أن يبدأ بـ 010 أو 011 أو 012 أو 015</span>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Information -->
+                    <div class="form-elegant-section">
+                        <h4 class="form-section-title-elegant">
+                            <span class="section-icon">🚚</span>
+                            عنوان التوصيل
+                        </h4>
+
+                        <div class="form-elegant-group">
+                            <label class="form-elegant-label">
+                                المحافظة <span class="required-elegant">*</span>
+                            </label>
+                            <select class="form-elegant-input" id="elegantGovernorate" required>
+                                <option value="">اختر المحافظة</option>
+                                <option value="القاهرة">القاهرة</option>
+                                <option value="الجيزة">الجيزة</option>
+                                <option value="الإسكندرية">الإسكندرية</option>
+                                <option value="الدقهلية">الدقهلية</option>
+                                <option value="الشرقية">الشرقية</option>
+                                <option value="القليوبية">القليوبية</option>
+                                <option value="البحيرة">البحيرة</option>
+                                <option value="الغربية">الغربية</option>
+                                <option value="المنوفية">المنوفية</option>
+                                <option value="كفر الشيخ">كفر الشيخ</option>
+                                <option value="دمياط">دمياط</option>
+                                <option value="بورسعيد">بورسعيد</option>
+                                <option value="الإسماعيلية">الإسماعيلية</option>
+                                <option value="السويس">السويس</option>
+                                <option value="الفيوم">الفيوم</option>
+                                <option value="بني سويف">بني سويف</option>
+                                <option value="المنيا">المنيا</option>
+                                <option value="أسيوط">أسيوط</option>
+                                <option value="سوهاج">سوهاج</option>
+                                <option value="قنا">قنا</option>
+                                <option value="الأقصر">الأقصر</option>
+                                <option value="أسوان">أسوان</option>
+                                <option value="البحر الأحمر">البحر الأحمر</option>
+                                <option value="الوادي الجديد">الوادي الجديد</option>
+                                <option value="مطروح">مطروح</option>
+                                <option value="شمال سيناء">شمال سيناء</option>
+                                <option value="جنوب سيناء">جنوب سيناء</option>
+                            </select>
+                        </div>
+
+                        <div class="form-elegant-group">
+                            <label class="form-elegant-label">
+                                العنوان التفصيلي <span class="required-elegant">*</span>
+                            </label>
+                            <textarea
+                                    class="form-elegant-input form-elegant-textarea"
+                                    id="elegantDetailedAddress"
+                                    placeholder="مثال: شارع النصر، عمارة 15، الدور 3، شقة 7"
+                                    rows="3"
+                                    required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-elegant-group">
+                            <label class="form-elegant-label">
+                                الكمية <span class="required-elegant">*</span>
+                            </label>
+                            <div class="quantity-elegant-selector">
+                                <button type="button" class="qty-elegant-btn" onclick="updateElegantQuantity(-1)">−</button>
+                                <input type="number" class="qty-elegant-input" id="elegantQuantity" value="1" min="1" max="10" readonly>
+                                <button type="button" class="qty-elegant-btn" onclick="updateElegantQuantity(1)">+</button>
+                            </div>
+                            <div class="quantity-elegant-note">
+                                🎁 اطلب 3 قطع واحصل على خصم إضافي 10%
+                            </div>
+                        </div>
+
+                        <div class="form-elegant-group">
+                            <label class="form-elegant-label">
+                                ملاحظات إضافية (اختياري)
+                            </label>
+                            <textarea
+                                    class="form-elegant-input form-elegant-textarea"
+                                    id="elegantNotes"
+                                    placeholder="أي ملاحظات خاصة..."
+                                    rows="2"
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="summary-elegant-box">
+                        <h4 class="summary-elegant-title">
+                            <span class="icon">💳</span>
+                            ملخص الطلب
+                        </h4>
+                        <div class="summary-elegant-rows">
+                            <div class="summary-elegant-row">
+                                <span>سعر القطعة الواحدة</span>
+                                <span>699 جنيه</span>
+                            </div>
+                            <div class="summary-elegant-row">
+                                <span>الكمية</span>
+                                <span id="elegantSummaryQty">1</span>
+                            </div>
+                            <div class="summary-elegant-row">
+                                <span>المجموع الفرعي</span>
+                                <span id="elegantSubtotal">699 جنيه</span>
+                            </div>
+                            <div class="summary-elegant-row discount-elegant-row" id="elegantDiscountRow" style="display: none;">
+                                <span>خصم الكمية (10%)</span>
+                                <span class="discount-elegant-amount" id="elegantDiscountAmount">- 0 جنيه</span>
+                            </div>
+                            <div class="summary-elegant-row">
+                                <span>الشحن</span>
+                                <span class="free-elegant-badge">مجاناً 🎁</span>
+                            </div>
+                            <div class="summary-elegant-divider"></div>
+                            <div class="summary-elegant-row total-elegant-row">
+                                <span>الإجمالي النهائي</span>
+                                <span class="total-elegant-price" id="elegantTotalPrice">699 جنيه</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-elegant-btn">
+                        <span class="btn-icon">🎁</span>
+                        <span>أكد طلبك الآن - الدفع عند الاستلام</span>
+                    </button>
+
+                    <div class="security-elegant-note">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>بياناتك محمية بالكامل - الدفع عند الاستلام فقط</span>
+                    </div>
+                </form>
+
+                <!-- Success Message Popup -->
+                <div class="success-elegant-modal" id="elegantSuccessModal">
+                    <div class="success-elegant-content">
+                        <div class="success-elegant-icon">✓</div>
+                        <h3 class="success-elegant-title">تم استلام طلبك بنجاح! 🎉</h3>
+                        <p class="success-elegant-message">
+                            شكراً لك! سيتواصل معك فريق خدمة العملاء خلال دقائق لتأكيد الطلب والعنوان.
+                        </p>
+                        <div class="success-elegant-details">
+                            <p><strong>رقم الطلب:</strong> <span id="elegantOrderNumber">#MUS12345</span></p>
+                            <p><strong>الاسم:</strong> <span id="elegantConfirmName"></span></p>
+                            <p><strong>الكمية:</strong> <span id="elegantConfirmQty"></span> قطعة</p>
+                            <p><strong>الإجمالي:</strong> <span id="elegantConfirmTotal"></span></p>
+                        </div>
+                        <div class="success-elegant-actions">
+                            <button class="success-elegant-btn primary" onclick="location.reload()">طلب جديد</button>
+                            <button class="success-elegant-btn secondary" onclick="location.href='index.html'">العودة للمتجر</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         5. LIVE STATS SECTION
+         ======================================== -->
+    <!-- Live Statistics Elegant -->
+    <section class="stats-elegant-section">
+        <div class="container-fluid">
+            <div class="stats-elegant-grid">
+                <div class="stat-elegant-card">
+                    <div class="stat-icon-elegant">👥</div>
+                    <div class="stat-number-elegant" id="elegantViewers">3494</div>
+                    <div class="stat-label-elegant">يشاهد الآن</div>
+                    <div class="live-pulse-elegant"></div>
+                </div>
+                <div class="stat-elegant-card">
+                    <div class="stat-icon-elegant">🔥</div>
+                    <div class="stat-number-elegant" id="elegantOrders">298</div>
+                    <div class="stat-label-elegant">طلب اليوم</div>
+                </div>
+                <div class="stat-elegant-card">
+                    <div class="stat-icon-elegant">⭐</div>
+                    <div class="stat-number-elegant">4.9</div>
+                    <div class="stat-label-elegant">من 562 تقييم</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         6. TARGET AUDIENCE SECTION
+         ======================================== -->
+    <section class="target-audience-section">
+        <div class="container">
+            <div class="section-header-elegant">
+                <h2 class="section-title-elegant">
+                    <span class="title-line"></span>
+                    <span>لمن يناسب بابا نويل الموسيقي؟</span>
+                    <span class="title-line"></span>
+                </h2>
+            </div>
+
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">👶</div>
+                    <h3>للأطفال المحبين للموسيقى</h3>
+                    <p>لعبة تفاعلية تعرّف الأطفال على الموسيقى الكلاسيكية بطريقة ممتعة، تنمي حس الإيقاع لديهم وتجعلهم يرقصون ويغنون معه</p>
+                    <div class="audience-age">السن المناسب: 3-10 سنوات</div>
+                </div>
+
+                <div class="audience-card featured">
+                    <div class="featured-badge">الأكثر طلباً</div>
+                    <div class="audience-icon">👪</div>
+                    <h3>للعائلات الراقية</h3>
+                    <p>ديكور فاخر يليق باحتفالات العائلة، يجمع الأسرة حول الموسيقى والفرح. استثمار في ذكريات جميلة تدوم للأبد</p>
+                    <div class="audience-age">مناسب لكل أفراد الأسرة</div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">💑</div>
+                    <h3>للأزواج الجدد</h3>
+                    <p>ابدأوا تقليد احتفالي جديد في منزلكم! قطعة ديكور أنيقة تضيف روح الأعياد لأول احتفالاتكم سوياً</p>
+                    <div class="audience-age">هدية رومانسية راقية</div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🎓</div>
+                    <h3>للمعلمين والحضانات</h3>
+                    <p>وسيلة تعليمية مبتكرة لتعريف الأطفال بالموسيقى والإيقاع. مثالي للأنشطة الجماعية والاحتفالات المدرسية</p>
+                    <div class="audience-age">للاستخدام التعليمي</div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🎁</div>
+                    <h3>كهدية راقية ومميزة</h3>
+                    <p>هدية فاخرة غير تقليدية تناسب الأصدقاء والأقارب. تأتي مع تغليف أنيق جاهز للإهداء</p>
+                    <div class="audience-age">تغليف فاخر مجاناً</div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🏢</div>
+                    <h3>للمكاتب الراقية</h3>
+                    <p>قطعة ديكور احترافية تضيف لمسة احتفالية لمكان العمل، تحسّن المزاج وتخلق جو إيجابي للموظفين والعملاء</p>
+                    <div class="audience-age">خصم خاص للشركات</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         7. FEATURES SECTION
+         ======================================== -->
+    <section class="features-showcase-elegant">
+        <div class="container">
+            <div class="section-header-elegant">
+                <h2 class="section-title-elegant">
+                    <span class="title-line"></span>
+                    <span>المميزات الرئيسية</span>
+                    <span class="title-line"></span>
+                </h2>
+            </div>
+
+            <div class="features-elegant-grid">
+                <div class="feature-elegant-card">
+                    <div class="feature-elegant-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>ألحان أصلية ساحرة</h3>
+                    <p>مجموعة من أشهر أغاني رأس السنة بجودة صوت عالية تملأ المكان بأجواء الاحتفال</p>
+                </div>
+
+                <div class="feature-elegant-card">
+                    <div class="feature-elegant-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>حركات راقصة مسلية</h3>
+                    <p>يتمايل ويرقص على إيقاع الموسيقى بحركات سلسة تبهر الأطفال والكبار</p>
+                </div>
+
+                <div class="feature-elegant-card">
+                    <div class="feature-elegant-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="6" width="22" height="12" rx="2"></rect>
+                            <line x1="7" y1="12" x2="17" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>بدون أسلاك - سهل الاستخدام</h3>
+                    <p>يعمل ببطاريات AAA، ضعه في أي مكان دون قيود الأسلاك والشحن</p>
+                </div>
+
+                <div class="feature-elegant-card">
+                    <div class="feature-elegant-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3>اللمسة النهائية المثالية</h3>
+                    <p>يكمل ديكور منزلك بلمسة فريدة تجعل احتفالك لا يُنسى</p>
+                </div>
+
+                <div class="feature-elegant-card">
+                    <div class="feature-elegant-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>آمن لجميع أفراد الأسرة</h3>
+                    <p>مصنوع من مواد عالية الجودة، آمن تماماً للأطفال والكبار</p>
+                </div>
+
+                <div class="feature-elegant-card">
+                    <div class="feature-elegant-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>جودة مضمونة</h3>
+                    <p>خامات متينة وتصنيع دقيق يضمن استخداماً لسنوات قادمة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         8. PRODUCT DETAILS / SPECIFICATIONS
+         ======================================== -->
+    <section class="specifications-elegant">
+        <div class="container">
+            <div class="section-header-elegant">
+                <h2 class="section-title-elegant">
+                    <span class="title-line"></span>
+                    <span>المواصفات والتفاصيل</span>
+                    <span class="title-line"></span>
+                </h2>
+            </div>
+
+            <div class="specs-elegant-grid">
+                <div class="spec-elegant-card">
+                    <div class="spec-label">المادة</div>
+                    <div class="spec-value">بلاستيك عالي الجودة</div>
+                </div>
+                <div class="spec-elegant-card">
+                    <div class="spec-label">الأبعاد</div>
+                    <div class="spec-value">28 سم × 14 سم</div>
+                </div>
+                <div class="spec-elegant-card">
+                    <div class="spec-label">مصدر الطاقة</div>
+                    <div class="spec-value">3 بطاريات AAA</div>
+                </div>
+                <div class="spec-elegant-card">
+                    <div class="spec-label">الوزن</div>
+                    <div class="spec-value">خفيف وسهل النقل</div>
+                </div>
+                <div class="spec-elegant-card">
+                    <div class="spec-label">السن المناسب</div>
+                    <div class="spec-value">من 3 سنوات فما فوق</div>
+                </div>
+                <div class="spec-elegant-card">
+                    <div class="spec-label">الوظائف</div>
+                    <div class="spec-value">موسيقى + رقص + إضاءة</div>
+                </div>
+            </div>
+
+            <div class="package-contents-elegant">
+                <h3>محتويات العبوة</h3>
+                <ul class="contents-list-elegant">
+                    <li><span class="check-elegant">✓</span> شخصية بابا نويل الموسيقي</li>
+                    <li><span class="check-elegant">✓</span> ألحان رأس السنة مدمجة</li>
+                    <li><span class="check-elegant">✓</span> إضاءة LED ملونة</li>
+                    <li><span class="check-elegant">✓</span> دليل الاستخدام بالعربية</li>
+                    <li><span class="check-elegant">✓</span> تغليف فاخر جاهز للإهداء</li>
+                    <li><span class="note-elegant">⚠️</span> البطاريات غير مرفقة (يحتاج 3 بطاريات AAA)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         9. TRUST BADGES SECTION
+         ======================================== -->
+    <section class="trust-elegant-section">
+        <div class="container">
+            <div class="trust-elegant-grid">
+                <div class="trust-elegant-card">
+                    <div class="trust-elegant-icon">✓</div>
+                    <h4>منتج أصلي 100%</h4>
+                    <p>ضمان الجودة والأمان</p>
+                </div>
+                <div class="trust-elegant-card">
+                    <div class="trust-elegant-icon">🚚</div>
+                    <h4>شحن مجاني</h4>
+                    <p>لجميع المحافظات</p>
+                </div>
+                <div class="trust-elegant-card">
+                    <div class="trust-elegant-icon">💳</div>
+                    <h4>دفع آمن</h4>
+                    <p>عند الاستلام فقط</p>
+                </div>
+                <div class="trust-elegant-card">
+                    <div class="trust-elegant-icon">↩️</div>
+                    <h4>إرجاع مجاني</h4>
+                    <p>خلال 7 أيام</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="js/product-musical-santa.js"></script>
+</body>
+</html>

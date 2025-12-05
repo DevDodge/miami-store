@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Miami Store - عروض الكريسماس ورأس السنة - خصومات تصل لـ 70%">
+    <meta name="keywords" content="تسوق, عروض, خصومات, كريسماس, رأس السنة">
+    <title>Miami Store | عروض الكريسماس ورأس السنة 🎄</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Dynamic Snow Canvas -->
+<canvas id="snowCanvas"></canvas>
+
+<!-- Parallax Background Layers -->
+<div class="parallax-wrapper">
+    <div class="parallax-layer layer-1" data-speed="0.2"></div>
+    <div class="parallax-layer layer-2" data-speed="0.4"></div>
+    <div class="parallax-layer layer-3" data-speed="0.6"></div>
+</div>
+
+<!-- Main Content -->
+<main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" data-scroll-section>
+        <div class="hero-container">
+            <div class="hero-brand-wrapper">
+                <div class="brand-icon-left">🎄</div>
+                <h1 class="hero-brand">Miami Store</h1>
+                <div class="brand-icon-right">🎁</div>
+            </div>
+
+            <div class="hero-tagline">
+                <span class="tagline-text">عروض الكريسماس الخيالية</span>
+                <span class="tagline-sparkle">✨</span>
+            </div>
+
+            <div class="hero-offer">
+                <div class="offer-badge">
+                    <span class="offer-text">خصومات حتى</span>
+                    <span class="offer-percentage">70%</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <button class="explore-btn" onclick="smoothScrollToProducts()">
+                    <span>استكشف المنتجات</span>
+                    <span class="btn-arrow">↓</span>
+                </button>
+            </div>
+
+            <div class="hero-features">
+                <div class="feature-pill">🚚 توصيل مجاني</div>
+                <div class="feature-pill">💳 دفع عند الاستلام</div>
+                <div class="feature-pill">🔄 استرجاع مجاني</div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-element element-1">🎅</div>
+            <div class="float-element element-2">⛄</div>
+            <div class="float-element element-3">🎁</div>
+            <div class="float-element element-4">⭐</div>
+            <div class="float-element element-5">🔔</div>
+        </div>
+    </section>
+
+    <!-- Live Stats Ticker -->
+    <div class="stats-ticker" data-scroll-section>
+        <div class="ticker-wrapper">
+            <div class="ticker-item">
+                <span class="ticker-icon">👥</span>
+                <span class="ticker-number" id="liveVisitors">2156</span>
+                <span class="ticker-label">زائر حالي</span>
+            </div>
+            <div class="ticker-divider"></div>
+            <div class="ticker-item">
+                <span class="ticker-icon">🔥</span>
+                <span class="ticker-number" id="todayOrders">342</span>
+                <span class="ticker-label">اوردر</span>
+            </div>
+            <div class="ticker-divider"></div>
+            <div class="ticker-item">
+                <span class="ticker-icon">⭐</span>
+                <span class="ticker-number">4.9</span>
+                <span class="ticker-label">تقييم العملاء</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section" id="productsSection" data-scroll-section>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-icon">🎁</span>
+                    <span>منتجات مميزة</span>
+                    <span class="title-icon">🎁</span>
+                </h2>
+                <p class="section-subtitle">اختر من مجموعتنا الحصرية</p>
+            </div>
+
+            <div class="products-masonry" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section" data-scroll-section>
+        <div class="trust-container">
+            <h3 class="trust-title">لماذا تختار Miami Store؟</h3>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon-wrapper">
+                        <span class="trust-icon">✅</span>
+                    </div>
+                    <h4 class="trust-card-title">ضمان الجودة</h4>
+                    <p class="trust-card-text">منتجات أصلية 100% مع ضمان المتجر</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-wrapper">
+                        <span class="trust-icon">🔒</span>
+                    </div>
+                    <h4 class="trust-card-title">دفع آمن</h4>
+                    <p class="trust-card-text">ادفع عند استلام المنتج بكل أمان</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-wrapper">
+                        <span class="trust-icon">🚀</span>
+                    </div>
+                    <h4 class="trust-card-title">شحن سريع</h4>
+                    <p class="trust-card-text">توصيل لجميع المحافظات خلال 24 ساعة</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-wrapper">
+                        <span class="trust-icon">💬</span>
+                    </div>
+                    <h4 class="trust-card-title">دعم متواصل</h4>
+                    <p class="trust-card-text">فريق الدعم متاح 24/7 لخدمتك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-scroll-section>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>🎄 Miami Store 🎁</h3>
+                <p>تسوق بذكاء، وفّر أكثر</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Miami Store. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
